@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;;
+}
+
+.container{
+    width: 100%;
+    min-height: 100%vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 50px;
+    cursor: pointer;
+    margin: 30px 0;
+}
+
+.menu{
+    width: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+nav{
+    flex:1;
+    text-align: right;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:#000000 ;
+    font-size: 14px;
+}
+
+nav ul li a:hover{
+    color: #f00909;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+.collum1{
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 50px;
+}
+.collum1 h2{
+    font-size: 70px;
+}
+.collum1 h4{
+    font-size: 30px;
+    color: #707070;
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+.collum1 p{
+    font-size: 16px;
+    color: #b7b7b7;
+    font-weight: 100;
+}
+.collum1 h4{
+    margin: 30px 0;
+    font-size: 20px;
+}
+
+button{
+    width: 200px;
+    height: 70px;
+    font-size: 20px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: aliceblue;
+    background: linear-gradient(to right, #f00909, #000000);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: width 0.5s;
+}
+button img{
+    width: 30px;
+    display: none;
+}
+button:hover img{
+    display: block;
+}
+button:hover{
+    width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.collum1::after{
+    content: '';
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(#f00909, #000000);
+    position: absolute;
+    left: -40px;
+    top: 10px;
+}
+
+.collum2{
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.collum2 .hoodie{
+    width: 50%;
+    transform: translateX(50px);
+}
+
+.color-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(#f00909, #000000);
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    width: 90%;
+    z-index: -1;
+    transform: translateX(150px);
+}
+
+.add-btn img{
+    width: 35px;
+    margin-bottom: 5px;
+}
+.add-btn{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    width: 130px;
+}
+
+.add-btn:hover{
+    color: #f00909;
+}
+
+.socials img{
+    height: 30px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: left;
+    
+}
+.socials{
+    text-align: left;
+}
+
+
+@media only screen and (max-width: 700px){
+    nav ul{
+        width: 100%;
+        background: linear-gradient(#f00909, #420f0f);
+        position: absolute;
+        top: 75px;
+        right: 0;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px; 
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu{
+        display: block;
+        margin-bottom: 10px;
+    } 
+    #menulist{
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .row{
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+    
+    .collum2{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+    .collum2 .hoodie{
+        width: 70%;
+    }
+    .color-box{
+        transform: translateX(75px);
+    }
+    .collum1::after{
+        flex-basis: 100%;
+    }
+    .collum1 h2{
+        font-size: 35px;
+    }
+    .collum1 h4{
+        font-size: 15px;
+    }
+}
